@@ -1,0 +1,20 @@
+# Extraction / Load
+pandas
+requests
+
+# Storage
+duckdb
+
+# Transformation
+dbt-core
+dbt-duckdb
+
+# Orchestration
+prefect
+
+# Visualization (external, optional connection)
+metabase-api
+
+# Utilities
+python-dotenv
+pyyaml

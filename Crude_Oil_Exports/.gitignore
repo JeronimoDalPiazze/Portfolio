@@ -13,20 +13,24 @@ env/
 .vscode/
 .idea/
 
-# Meltano / ELT artifacts
-.meltano/
-.meltano-*
+# DuckDB database and warehouse files
 warehouse/
 *.duckdb
 
-# Dagster runtime folders
-dagster_home/
+# dbt artifacts
+dbt_packages/
+target/
+logs/
+
+# Prefect artifacts
+.prefect/
+flow_runs/
 storage/
 
-# Logs and temp files
-logs/
+# Temporary and log files
 *.log
 *.tmp
+*.bak
 
 # OS metadata
 .DS_Store
