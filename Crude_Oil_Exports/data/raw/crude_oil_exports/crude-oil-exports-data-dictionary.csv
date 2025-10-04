@@ -1,0 +1,20 @@
+Period,06/01/1985 to most recently available
+Year,1986 to most recently available
+Month,"January, February, March, April, May, June, July, August, September, October, November, December"
+PADD,"PADD I, PADD II, PADD III,PADD IV, PADD V, Other, Total"
+Oil Type,"Light, Medium, Heavy, Total"
+Volume (m3/d),Volume of crude oil exports in cubic metres per day
+Volume (bbl/d),Volume of crude oil exports in barrels per day
+Confidential,Confidentiality rules have been applied to this report.  Some data is considered confidential and cannot be released.
+PADD,Petroleum Administration for Defense District (U.S.A.)
+PADD I                                            ,East Coast
+PADD II                                           ,Midwest
+PADD III                                          ,Gulf Coast
+PADD IV                                           ,Rocky Mountain
+PADD V                                            ,West Coast (includes Hawaii and Alaska)
+Other                                             ,Other exports (includes exports to storage and Non-US destnations)
+Light,Crude oil with API of more than 30
+Medium,Crude oil with API between 25 and 30
+Heavy,Crude oil with API of less than 25
+m3,Cubic metres
+bbl,Barrels
