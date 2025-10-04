@@ -21,7 +21,7 @@ Visualize insights through Metabase dashboards showing export trends, destinatio
 ## Project Structure
 
 ```text
-crude_oil_exports/
+Crude_Oil_Exports/
 ├── data/
 │   ├── raw/                  # 🗂️ Raw CSV files (NRCan source data)
 │   └── docs/                 # 📘 Data dictionaries, metadata, and notes
