@@ -1,0 +1,33 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.env
+.venv/
+venv/
+env/
+
+# Editor settings
+.vscode/
+.idea/
+
+# Meltano / ELT artifacts
+.meltano/
+.meltano-*
+warehouse/
+*.duckdb
+
+# Dagster runtime folders
+dagster_home/
+storage/
+
+# Logs and temp files
+logs/
+*.log
+*.tmp
+
+# OS metadata
+.DS_Store
+Thumbs.db
