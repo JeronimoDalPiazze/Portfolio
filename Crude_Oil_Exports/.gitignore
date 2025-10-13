@@ -1,0 +1,40 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.env
+.venv/
+venv/
+env/
+
+# Editor settings
+.vscode/
+.idea/
+
+# DuckDB database and warehouse files
+warehouse/
+*.duckdb
+
+# dbt artifacts
+dbt_packages/
+target/
+logs/
+
+# Prefect artifacts
+.prefect/
+flow_runs/
+storage/
+
+# Temporary and log files
+*.log
+*.tmp
+*.bak
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# user
+.user.yaml
