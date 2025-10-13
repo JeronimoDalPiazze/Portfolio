@@ -1,0 +1,114 @@
+version: 2
+
+models:
+
+  - name: stg_crude_oil_exports_by_destination_annual
+    description: "Annual crude oil exports by destination"
+    config:
+      contract:
+        enforced: true
+      tags: ['staging']
+    columns:
+      - name: year
+        data_type: integer
+        tests:
+          - not_null
+      - name: destination
+        data_type: varchar
+        tests:
+          - not_null
+      - name: volume_cubic_meters_per_day
+        data_type: double
+        tests:
+          - non_negative
+      - name: volume_barrels_per_day
+        data_type: double
+        tests:
+          - non_negative
+
+  - name: stg_crude_oil_exports_by_destination_monthly
+    description: "Monthly crude oil exports by destination"
+    config:
+      contract:
+        enforced: true
+      tags: ['staging']
+    columns:
+      - name: period_date
+        data_type: date
+        tests:
+          - not_null
+      - name: year
+        data_type: integer
+      - name: month_name
+        data_type: varchar
+      - name: destination
+        data_type: varchar
+        tests:
+          - not_null
+      - name: volume_cubic_meters_per_day
+        data_type: double
+        tests:
+          - non_negative
+      - name: volume_barrels_per_day
+        data_type: double
+        tests:
+          - non_negative
+
+  - name: stg_crude_oil_exports_by_type_annual
+    description: "Annual crude oil exports by oil type"
+    config:
+      contract:
+        enforced: true
+      tags: ['staging']
+    columns:
+      - name: year
+        data_type: integer
+        tests:
+          - not_null
+      - name: oil_type
+        data_type: varchar
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - "light"
+                - "medium"
+                - "heavy"
+      - name: volume_cubic_meters_per_day
+        data_type: double
+        tests:
+          - non_negative
+      - name: volume_barrels_per_day
+        data_type: double
+        tests:
+          - non_negative
+
+  - name: stg_crude_oil_exports_by_type_monthly
+    description: "Monthly crude oil exports by oil type"
+    config:
+      contract:
+        enforced: true
+      tags: ['staging']
+    columns:
+      - name: period_date
+        data_type: date
+        tests:
+          - not_null
+      - name: year
+        data_type: integer
+      - name: month_name
+        data_type: varchar
+      - name: oil_type
+        data_type: varchar
+        tests:
+          - not_null
+          - accepted_values:
+              arguments: { values: ["light", "medium", "heavy"] }
+      - name: volume_cubic_meters_per_day
+        data_type: double
+        tests:
+          - non_negative
+      - name: volume_barrels_per_day
+        data_type: double
+        tests:
+          - non_negative

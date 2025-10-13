@@ -1,0 +1,14 @@
+name: crude_oil_exports
+version: 1.0.0
+config-version: 2
+
+profile: crude_oil_exports
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target"]
+
+models:
+  crude_oil_exports:
+    +schema: main
+    +materialized: table

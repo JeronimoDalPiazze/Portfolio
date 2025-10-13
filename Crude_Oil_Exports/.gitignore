@@ -35,3 +35,6 @@ storage/
 # OS metadata
 .DS_Store
 Thumbs.db
+
+# user
+.user.yaml
