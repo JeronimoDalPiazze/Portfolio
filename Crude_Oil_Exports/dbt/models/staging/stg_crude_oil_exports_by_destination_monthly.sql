@@ -6,10 +6,7 @@ WITH source_data AS (
 )
 
 SELECT
-    CASE
-        WHEN "Period" IS NULL OR TRIM(CAST("Period" AS VARCHAR)) = '' THEN NULL
-        ELSE CAST(TRY_STRPTIME(CAST("Period" AS VARCHAR), '%m/%d/%Y') AS DATE)
-    END AS period_date,
+    CASE WHEN "Period" IS NULL THEN NULL ELSE CAST("Period" AS DATE) END AS period_date,
     CAST("Year" AS INTEGER) AS "year",
     LOWER("Month") AS month_name,
     PADD AS destination,
