@@ -1,1 +1,26 @@
-Crude_Oil_Exports/dbt/profiles/.user.yml
+# Global Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual envs (geral)
+.venv/
+venv/
+env/
+
+# Editor settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Ignore generic temporary or local data for all projects
+*.log
+*.tmp
+*.bak
+
+# GitHub settings
+*.swp
+*.swo

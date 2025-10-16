@@ -37,4 +37,4 @@ storage/
 Thumbs.db
 
 # user
-.user.yaml
+Crude_Oil_Exports/dbt/profiles/.user.yml
