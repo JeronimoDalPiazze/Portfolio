@@ -38,3 +38,6 @@ Thumbs.db
 
 # user
 Crude_Oil_Exports/dbt/profiles/.user.yml
+
+# Raw files
+Crude_Oil_Exports/data/raw/*.csv
