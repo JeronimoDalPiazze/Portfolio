@@ -1,0 +1,35 @@
+services:
+  metabase:
+    user: "0:0"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: metabase
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      # Metabase application config
+      MB_DB_FILE: /home/metabase/metabase.db
+      MB_PLUGINS_DIR: /home/metabase/plugins
+      MB_SITE_NAME: "Crude Oil Exports - Metabase"
+      MB_SITE_URL: "http://localhost:3000"
+      MB_ENABLE_PUBLIC_SHARING: "true"
+
+    volumes:
+      # Persist Metabase application data
+      - ./metabase-data:/metabase-data
+      # Mount the DuckDB warehouse from your project root
+      # (adjust ../ path if needed)
+      - ../warehouse:/home/metabase/data/warehouse:ro
+
+    # Wait until the warehouse exists before starting Metabase
+    depends_on:
+      - wait-for-warehouse
+
+  wait-for-warehouse:
+    image: busybox:latest
+    container_name: wait-for-warehouse
+    command: >
+      sh -c "until [ -f /warehouse/crude_oil_exports.duckdb ];
+             do echo 'Waiting for warehouse...'; sleep 2; done"
